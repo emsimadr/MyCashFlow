@@ -3,7 +3,7 @@ var router = express.Router();
 
 var controllers = require('../controllers/index');
 
-router.post('/login', auth.login);
+router.post('/login', controllers.auth.login);
 
 router.get('/api/v1/transactions', controllers.transactions.getAll);
 router.get('/api/v1/transaction/:id', controllers.transactions.getOne);
