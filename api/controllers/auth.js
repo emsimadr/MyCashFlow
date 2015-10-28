@@ -17,9 +17,9 @@ var auth = {
        return;
      }
 
-     var dbUserObj = auth.validate(username, password);
+     var user = auth.validate(username, password);
 
-     if (!dbUserObj) {
+     if (!user) {
        res.status(401);
        res.json({
          "status": constants.ERRORS.INVALID_CREDENTIALS.status,
@@ -28,30 +28,30 @@ var auth = {
        return;
      }
 
-     if (dbUserObj) {
-       res.json(genToken(dbUserObj));
+     if (user) {
+       res.json(genToken(user));
      }
   },
 
   validate: function(username, password) {
     //Plugin Mongo here!!!
-    var dbUserObj = {
+    var user = {
       name: 'michael',
       role: 'admin',
       username: 'michael@simader.me'
     };
 
-    return dbUserObj;
+    return user;
   },
 
   validateUser: function(username){
-    var dbUserObj = {
+    var user = {
       name: 'michael',
       role: 'admin',
       username: 'michael@simader.me'
     };
 
-    return dbUserObj;
+    return user;
   }
 }
 

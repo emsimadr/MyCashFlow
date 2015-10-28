@@ -1,5 +1,5 @@
 module.exports = Object.freeze({
-  transactionType: {
+  TransactionType: {
     PLUS: '+',
     MINUS: '-'
   },

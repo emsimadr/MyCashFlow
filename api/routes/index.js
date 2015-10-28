@@ -1,16 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-var auth = require('../controllers/auth.js');
-var transactions = require('../controllers/transactions.js');
+var controllers = require('../controllers/index');
 
 router.post('/login', auth.login);
 
-router.get('/api/v1/transactions', transactions.getAll);
-router.get('/api/v1/transaction/:id', transactions.getOne);
-router.post('/api/v1/transaction/', transactions.create);
-router.put('/api/v1/transaction/:id', transactions.update);
-router.delete('/api/v1/transaction/:id', transactions.delete);
+router.get('/api/v1/transactions', controllers.transactions.getAll);
+router.get('/api/v1/transaction/:id', controllers.transactions.getOne);
+router.post('/api/v1/transaction/', controllers.transactions.create);
+router.put('/api/v1/transaction/:id', controllers.transactions.update);
+router.delete('/api/v1/transaction/:id', controllers.transactions.delete);
 
 //router.get('/api/v1/admin/users', users.getAll);
 //router.get('/api/v1/admin/user/:id', users.getOne);

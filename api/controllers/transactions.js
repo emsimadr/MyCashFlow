@@ -30,25 +30,25 @@ var transactions = {
 
 var data = [{
   id: '1',
-  type: constants.transactionType.PLUS,
+  type: constants.TransactionType.PLUS,
   date: '11-09-2015',
   description: 'Salary',
   amount: '$1,000.00'
 }, {
   id: '2',
-  type: constants.transactionType.MINUS,
+  type: constants.TransactionType.MINUS,
   date: '11-01-2015',
   description: 'Rent',
   amount: '$2,000.00'
 }, {
   id: '3',
-  type: constants.transactionType.MINUS,
+  type: constants.TransactionType.MINUS,
   date: '11-17-2015',
   description: 'Citi',
   amount: '$1,200.00'
 }, {
   id: '4',
-  type: constants.transactionType.MINUS,
+  type: constants.TransactionType.MINUS,
   date: '11-20-2015',
   description: 'Utilities',
   amount: '$300.00'
