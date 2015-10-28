@@ -3,6 +3,10 @@ module.exports = Object.freeze({
     PLUS: '+',
     MINUS: '-'
   },
+  UserType: {
+    ADMIN: 'Admin',
+    USER: 'User'
+  },
   ERRORS: {
     INVALID_CREDENTIALS: {
       status: 401,

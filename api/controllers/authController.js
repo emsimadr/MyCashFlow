@@ -1,5 +1,6 @@
 var jwt = require('jwt-simple');
 var constants = require('../lib/constants');
+var users = require('../models').users;
 
 var auth = {
   login: function(req, res) {
@@ -34,7 +35,6 @@ var auth = {
   },
 
   validate: function(username, password) {
-    //Plugin Mongo here!!!
     var user = {
       name: 'michael',
       role: 'admin',
@@ -45,6 +45,7 @@ var auth = {
   },
 
   validateUser: function(username){
+
     var user = {
       name: 'michael',
       role: 'admin',

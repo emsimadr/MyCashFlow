@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var TransactionType = require('../lib/constants').TransactionType;
 
-var transcationSchema = new mongoose.Schema({
+var transactionsSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now,
@@ -9,7 +9,7 @@ var transcationSchema = new mongoose.Schema({
   },
   transactionType: {
     type: String,
-    enum: ['+', '-'],
+    enum: [TransactionType.PLUS, TransactionType.MINUS],
     required: true
   },
   description: {
@@ -23,4 +23,4 @@ var transcationSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Transcation',transcactionSchema);
+module.exports = mongoose.model('Transcations',transactionsSchema);

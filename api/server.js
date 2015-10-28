@@ -42,8 +42,8 @@ app.use('/', require('./routes'));
 
 //If no rout is matched by now, it must be a 404
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
+  var err = new Error('Not Implemented');
+  err.status = 501;
   next(err);
 });
 
@@ -54,4 +54,5 @@ var https = https.createServer(options, app);
 
 var server = https.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + server.address().port);
+  require('./controllers/dbController')();
 });

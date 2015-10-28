@@ -1,7 +1,7 @@
-module.export = function() {
+module.exports = function() {
   return {
-    db: {
-      URI: "mongodb://localhost/MyCashFlow"
+    DB: {
+      URI: "mongodb://localhost/mycashflow"
     }
   }
 }

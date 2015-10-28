@@ -1,4 +1,4 @@
 module.exports = {
-  auth: require('./auth.js'),
-  transactions: require('./transactions.js')
+  auth: require('./authController.js'),
+  transactions: require('./transactionsController.js')
 }
