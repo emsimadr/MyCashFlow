@@ -5,11 +5,8 @@ var transactions = require('../models').transactions;
 var transactionsController = {
   getAll: function(req, res) {
     transactions.find({}, function(err, docs) {
-      console.log('bla');
       if (!err) {
-        console.log('bla1');
         res.json(docs);
-        console.log('bla2');
       } else {
         res.status(500);
       }
